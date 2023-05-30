@@ -1,23 +1,24 @@
-# Chat Bot
+## Chat Bot
 
-Chat Bot is a simple Python application that utilizes the OpenAI GPT-3.5 model to provide conversational capabilities. It presents a graphical user interface (GUI) built with the Tkinter library.
+Welcome to the Chat Bot project! This repository contains a chat bot that interacts with ChatGPT, a powerful language model developed by OpenAI. This document will guide you through the setup process and provide instructions for installing the necessary dependencies.
 
-## Features
+### Prerequisites
 
-- Allows users to enter text messages as input.
-- Sends user messages to the OpenAI API to generate a response.
-- Displays the response from the chat bot.
-- Supports sending messages by clicking the "Send" button or pressing the Enter key.
-- Dynamically adjusts the size of the input box and reply box based on window resizing.
+Before you begin, you will need to obtain an API key from OpenAI. You can acquire the API key by visiting `https://platform.openai.com/account/api-keys`
 
-## Prerequisites
+### Setup
 
-- Python 3.x
-- Requests library (install using `pip install requests`)
-- Tkinter (`pip install tkinter`)
-- pyton-dotenv (`pip install python-dotenv`)
-- OpenAI API credentials (Bearer token)
+To set up the Chat Bot, follow these steps:
 
-## Installing Requirements
+1. Create a `.env` file in the root directory of the project.
+2. Open the `.env` file and add the following line: `API_KEY="YOUR_KEY"`. Replace `YOUR_KEY` with the API key you obtained in the previous step.
 
-`pip install -r requirements.txt`
+### Installing Requirements
+
+To install the required dependencies for the Chat Bot, execute the following command:
+
+```shell
+pip install -r requirements.txt
+```
+
+### Running Chat Bot
