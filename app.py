@@ -1,18 +1,25 @@
 import tkinter as tk
 import requests
+import os
+from dotenv import load_dotenv
+load_dotenv('.env')
+
+api_key = os.getenv('API_KEY')
+conversation = []
 
 def send_request(event=None):
     user_input = input_box.get()
 
+    conversation.append({'role': 'user', 'content': user_input})
+
     payload = {
-        'messages': [{'role': 'system', 'content': 'You are a helpful assistant.'},
-                     {'role': 'user', 'content': user_input}],
+        'messages': conversation,
         'max_tokens': 50,
         'model': 'gpt-3.5-turbo'
     }
 
     headers = {
-        'Authorization': 'Bearer <API_KEY>',
+        'Authorization': api_key,
         'Content-Type': 'application/json'
     }
 
@@ -33,6 +40,8 @@ def send_request(event=None):
 
     response_box.delete(1.0, tk.END)
     response_box.insert(tk.END, message)
+    input_box.delete(0, tk.END)  # Clear the input box
+
 
 root = tk.Tk()
 root.title("Chat Bot")

@@ -15,6 +15,9 @@ Chat Bot is a simple Python application that utilizes the OpenAI GPT-3.5 model t
 - Python 3.x
 - Requests library (install using `pip install requests`)
 - Tkinter (`pip install tkinter`)
+- pyton-dotenv (`pip install python-dotenv`)
 - OpenAI API credentials (Bearer token)
 
-## Installation
+## Installing Requirements
+
+`pip install -r requirements.txt`
