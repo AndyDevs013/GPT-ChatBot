@@ -41,16 +41,19 @@ def create_gui(conversation):
     send_button = tk.Button(input_frame, text="Send", command=lambda: send_request(input_box, response_box, conversation))
     send_button.pack(side=tk.LEFT)
 
-    response_box = tk.Text(root, height=5, width=30)
+    response_box = tk.Text(root, height=5, width=60)
     response_box.pack(fill=tk.BOTH, expand=True)
 
     # Create a floating icon
     icon = tk.Toplevel(root)
     icon.overrideredirect(True)
-    icon.geometry("+100+100")  # Adjust the initial position of the icon
+    icon.geometry("+50+50")  # Adjust the initial position of the icon
     icon.wm_attributes("-topmost", True)
 
-    icon_button = tk.Button(icon, text="Chat Bot", command=toggle_visibility)
+    image = tk.PhotoImage(file="gpt.png")
+    resized_image = image.subsample(4, 4)
+
+    icon_button = tk.Button(icon, image=resized_image, command=toggle_visibility)
     icon_button.pack()
     icon_button.bind("<ButtonPress-1>", start_drag)  # Bind left mouse button press event to start dragging
 
