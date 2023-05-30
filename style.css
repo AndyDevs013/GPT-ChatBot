@@ -1,0 +1,22 @@
+#root {
+  background-color: #f0f0f0;
+}
+
+#input_box {
+  font-family: Arial;
+  font-size: 12px;
+}
+
+#send_button {
+  background-color: #0080ff;
+  color: white;
+  border: none;
+}
+
+#response_box {
+  font-family: Arial;
+  font-size: 12px;
+  border: solid;
+  background-color: white;
+  padding: 5px;
+}
