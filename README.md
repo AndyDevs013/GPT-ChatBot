@@ -22,3 +22,4 @@ pip install -r requirements.txt
 ```
 
 ### Running Chat Bot
+`python app.py`
